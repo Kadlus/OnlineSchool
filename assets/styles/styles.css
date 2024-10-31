@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #e13690;
+    --secondary-color: #f57284;
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #c4c4c4;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    justify-content: space-evenly;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--black)
+}
+
+.intro-container {
+    background: #000000;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.intro-text {
+    position: absolute;
+    width: 30%;
+    left: 20%;
+    top: 15%;
+}
+
+.intro-text h1 {
+    color: var(--primary-color);
+    font-size: 64px;
+}
+
+.intro-text p {
+    color: var(--white);
+    line-height: 2;
+    font-size: 18px;
+}
+
+.intro-text button {
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 32px;
+    width: 250px;
+    color: var(--white);
+    background: rgb(245,114,132);
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    border: none;
+}
+
+.intro-text button:hover {
+    cursor: pointer;
+}
+
+.intro-welcome-photo {
+    position: relative;
+    display: inline-block;
+    left: 70%;
+    top: 62%;
+    margin-right: 25px;
+}
+
+.intro-welcome-photo img {
+    height: 601px;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: -100px;
+}
+
+.pink-circle {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.study-fields {
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    padding: 100px 0 100px 0;
+}
+
+.study-fields h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+    color: var(--white);
+}
+
+.start-learning-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.start-learning-container article {
+    margin-right: 20px;
+    color: var(--white);
+}
+
+.study-field-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.start-learning-container h3 {
+    font-size: 52px;
+    margin: 8px 0;
+}
+
+.start-learning-container p {
+    font-style: italic;
+    font-size: 16px;
+    margin: 0;
+}
+
+.pathways {
+    background: var(--black);
+    padding: 100px 0 100px 0;
+}
+
+.pathways-container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+}
+
+.pathways h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+}
+
+.pathways-container article {
+    color: var(--black);
+    min-height: 400px;
+    background: var(--white);
+    padding: 18px;
+    border-radius: 20px;
+    text-align: left;
+    width: 30%;
+}
+
+.pathways article h3 {
+    font-size: 32px;
+    margin: 8px 0;
+    text-wrap: nowrap;
+}
+
+.fa {
+    font-size: 32px;
+}
+
+.school h2 {
+    color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+    .intro-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media  (max-width: 1200px) {
+    .intro-text {
+        left: 10%;
+    }
+}
