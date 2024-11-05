@@ -175,6 +175,21 @@ body {
     color: var(--primary-color);
 }
 
+.button-group button {
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 28px;
+    width: 150px;
+    color: var(--white);
+    background: rgb(245,114,132);
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    border: none;
+}
+
+.button-group button:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 767px) {
     .intro-container {
         display: flex;
