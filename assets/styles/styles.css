@@ -171,8 +171,26 @@ body {
     font-size: 32px;
 }
 
-.school h2 {
+.fa:hover {
+    color: var(--grey);
+}
+
+.school {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.school-left-side h2 {
     color: var(--primary-color);
+    font-size: 42px;
+}
+
+.school-left-side p {
+    margin: 40px 0 40px 0;
+    padding-right: 60px;
 }
 
 .button-group button {
@@ -184,10 +202,26 @@ body {
     background: rgb(245,114,132);
     background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
     border: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .button-group button:hover {
     cursor: pointer;
+}
+
+.school-right-side img {
+
+}
+
+.online-courses {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.courses-testimonial {
+    display: flex;
 }
 
 @media (max-width: 767px) {
@@ -200,5 +234,18 @@ body {
 @media  (max-width: 1200px) {
     .intro-text {
         left: 10%;
+    }
+    .school {
+        flex-direction: column;
+        text-align: center;
+    }
+    .button-group {
+        margin-bottom: 50px;
+    }
+}
+
+@media  (max-width: 1600px) {
+    .start-learning-container, .pathways-container, .school, .online-courses {
+        width: 80%;
     }
 }
