@@ -1,6 +1,7 @@
 :root {
     --primary-color: #e13690;
-    --secondary-color: #f57284;
+    --secondary-color: #f77d82;
+    --secondory-light: #F77D82FF;
     --black: #000000;
     --white: #ffffff;
     --grey: #c4c4c4;
@@ -30,15 +31,15 @@ body {
 .intro-container {
     background: #000000;
     width: 100%;
-    height: 700px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .intro-text {
-    position: absolute;
     width: 30%;
-    left: 20%;
-    top: 15%;
 }
 
 .intro-text h1 {
@@ -52,27 +53,30 @@ body {
     font-size: 18px;
 }
 
-.intro-text button {
+.pink-button {
     font-size: 18px;
     padding: 20px;
     border-radius: 32px;
     width: 250px;
     color: var(--white);
-    background: rgb(245,114,132);
     background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
     border: none;
 }
 
+.btn:hover {
+    cursor: pointer;
+    background: var(--secondary-color);
+    transition: 0.5s;
+}
+
 .intro-text button:hover {
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .intro-welcome-photo {
     position: relative;
-    display: inline-block;
-    left: 70%;
-    top: 62%;
-    margin-right: 25px;
+    top: 14%;
 }
 
 .intro-welcome-photo img {
@@ -88,8 +92,6 @@ body {
     height: 500px;
     background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
     border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
 }
 
 .study-fields {
@@ -146,9 +148,9 @@ body {
 }
 
 .pathways h2 {
-    margin: 0;
     text-align: center;
     font-size: 42px;
+    color: var(--white);
 }
 
 .pathways-container article {
@@ -173,6 +175,8 @@ body {
 
 .fa:hover {
     color: var(--grey);
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .school {
@@ -180,7 +184,7 @@ body {
     align-items: center;
     width: 60%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 80px 0 80px 0;
 }
 
 .school-left-side h2 {
@@ -199,8 +203,7 @@ body {
     border-radius: 28px;
     width: 150px;
     color: var(--white);
-    background: rgb(245,114,132);
-    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    background-image: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
     border: none;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -208,32 +211,287 @@ body {
 
 .button-group button:hover {
     cursor: pointer;
-}
-
-.school-right-side img {
-
+    transition: 0.5s;
 }
 
 .online-courses {
-    width: 60%;
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+}
+
+.online-courses-container {
+    width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding: 80px 0 80px 0;
+}
+
+.online-courses-container-desc {
+    width: 50%;
+    color: var(--white);
+    margin: 0 auto 50px auto;
+}
+
+.online-courses-container h2 {
+    font-size: 42px;
+    color: var(--white);
 }
 
 .courses-testimonial {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
-@media (max-width: 767px) {
+.course {
+    width: 20%;
+    background: var(--white);
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.course p {
+    color: var(--grey);
+}
+
+.course-desc {
+    margin: 0;
+    width: 100%;
+}
+
+.course img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.course .more {
+    text-transform: uppercase;
+}
+
+.course .more:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 50px;
+    margin: 0 auto 0;
+    background: var(--primary-color);
+}
+
+.statistics {
+    background: var(--black);
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0 80px 0;
+    color: var(--white);
+}
+
+.stat-cube h2 {
+    font-size: 52px;
+}
+
+.statistics-left-side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.statistics-right-side h2 {
+    font-size: clamp(1.5rem, -1.0rem + 4vw, 3rem);
+    margin: 0;
+}
+
+.review-section {
+    background: linear-gradient(90deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    padding-bottom: 80px;
+}
+
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    justify-items: center;
+    padding: 80px 0 80px 0;
+}
+
+.review {
+    border-radius: 24px;
+    padding: 20px 8px 0 8px;
+    background: var(--white);
+    max-width: 400px;
+}
+
+.review p {
+    font-style: italic;
+    color: var(--grey);
+    margin: 0;
+    padding: 24px 14px 0 14px;
+}
+
+.review h2 {
+    text-transform: uppercase;
+    color: var(--secondory-light);
+}
+
+blockquote {
+    position: relative;
+    padding: 10px;
+    font-style: italic;
+}
+
+q {
+    font: 8rem Georgia, serif;
+    color: var(--secondory-light);
+    quotes: """\201C";
+}
+
+.review-btn {
+    text-align: center;
+}
+
+.contact-section {
+    background: #eaeaea;
+}
+
+.contact-container {
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us {
+    width: 35%;
+    background: linear-gradient(360deg, rgba(245,114,132,1) 20%, rgba(225,54,144,1) 100%);
+    padding: 24px;
+}
+
+.contact-form {
+    width: 35%;
+    background: var(--white);
+    padding: 24px;
+}
+
+.contact-us h2, .contact-us h3 {
+    color: var(--white);
+}
+
+.contact-us p {
+    color: var(--white);
+}
+
+.social-media {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.social-media-link i {
+    font-size: 20px;
+}
+
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    resize: vertical;
+}
+
+input[type=button] {
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 14px;
+    border: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+input[type=button]:hover {
+    background: var(--black);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+
+@media screen and (max-width: 767px) {
     .intro-container {
         display: flex;
         flex-direction: column;
     }
+
+
+    .courses-testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+    .course {
+        width: 80%;
+    }
+    .course p {
+        min-height: auto;
+    }
+    .start-learning-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .statistics-container {
+        text-align: center;
+        flex-direction: column;
+        align-content: center
+    }
+
+    .review-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-form, .contact-us {
+        width: 90%;
+    }
 }
 
-@media  (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .intro-text {
-        left: 10%;
+        width: 80%;
+    }
+    .intro-container {
+        flex-direction: column;
+    }
+    .pathways-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pathways-container article {
+        width: 90%;
+        min-height: unset;
     }
     .school {
         flex-direction: column;
@@ -242,10 +500,14 @@ body {
     .button-group {
         margin-bottom: 50px;
     }
+    .review-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-@media  (max-width: 1600px) {
-    .start-learning-container, .pathways-container, .school, .online-courses {
+@media screen and  (max-width: 1600px) {
+    .start-learning-container, .pathways-container, .school {
         width: 80%;
     }
 }
